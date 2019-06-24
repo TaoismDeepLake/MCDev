@@ -1,0 +1,15 @@
+获取MOD的文本文件
+1，获取目标文件的jar包
+2，用RAR等工具解压之
+3，在assets\dweapon\lang下，en_us.lang是美式英语文本（默认语言），zh_cn.lang是简体中文文本
+
+
+
+
+获取MC自身的文本
+-如果是en_us，则和前述大同小异，比照拆解jar可找到。
+-如果是其他语言文件，需要查看.minecraft\assets\indexes\1.12.json，在其中搜索zh_cn.lang，见到如下结构：
+……
+"minecraft/lang/zh_cn.lang": {"hash": "3622414e677312c3ccd9c02cefd8e9d1d973a991", "size": 156149}, 
+……
+则那一大串hash值就是文件名，在拆解后的jar里可以搜到同名文件，复制重命名为zh_cn.lang即可如常编辑修改。不同版本的hash值可能不同，搜索“minecraft/lang/zh_cn.lang”即可。
